@@ -7,19 +7,25 @@ export function Menu ()
     <div className='main-menu-container'>
       <h1>Buenas prácticas React</h1>
       <div className='card-container'>
-        <div className='card'>
+        <div className='card architecture'>
           <div className='content'>
-            <a href='/arquitectura'>Arquitectura</a>
+            <div className='link-text-div'>
+              <a href='/arquitectura'>Arquitectura</a>
+            </div>
           </div>
         </div>
         <div className='card'>
           <div className='content'>
-            <a href="/clasesvsfunciones">Clases vs Funciones</a>
+            <div className='link-text-div'>
+              <a href="/clasesvsfunciones">Clases vs Funciones</a>
+            </div>
           </div>
         </div>
         <div className='card'>
           <div className='content'>
-            <a href='/redux'>Redux</a>
+            <div className='link-text-div'>
+              <a href='/redux'>Redux</a>
+            </div>
           </div>
         </div>
       </div>
