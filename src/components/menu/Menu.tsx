@@ -8,6 +8,8 @@ export function Menu ()
       <h1>Buenas prácticas React</h1>
       <div className='card-container'>
         <div className='card architecture'>
+          <div className='gradient-card'>
+          </div>
           <div className='content'>
             <div className='link-text-div'>
               <a href='/arquitectura'>Arquitectura</a>
