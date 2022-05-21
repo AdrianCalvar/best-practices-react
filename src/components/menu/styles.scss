@@ -69,6 +69,7 @@ body {
         hsla(0, 0%, 0%, 0.790) 100%);
   }
 
+
   .card {
     width: 15rem;
     height: 350px;
@@ -84,10 +85,34 @@ body {
       0 16px 16px rgba(0, 0, 0, 0.1);
 
 
-    &.architecture {
+    &.architecture,
+    &.clasesvsfunciones,
+    &.redux {
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url("assets/image.jpg");
+
+    }
+
+    &.architecture {
+      background-image: url("assets/architecture.jpg");
+    }
+
+    &.clasesvsfunciones {
+      background-position: center;
+      background-image: url("assets/fight.jpg");
+
+    }
+
+    &.redux {
+
+      &::before {
+        transform: scale(1.5);
+        content: '';
+        width: 400px;
+        height: 400px;
+        background-position: center;
+        background-image: url("assets/redux.jpg");
+      }
 
     }
 
@@ -95,20 +120,28 @@ body {
       cursor: pointer;
 
       &.architecture {
-        animation-fill-mode: forwards;
-        animation: Animation 5s ease infinite;
 
+        animation-fill-mode: forwards;
+        animation: ArchitectureAnimation 5s ease infinite;
+      }
+
+      &.clasesvsfunciones {
+        animation-fill-mode: forwards;
+        animation: FightAnimation 5s alternate infinite;
+
+      }
+
+      &.redux::before {
+        animation: ZoomInAnimation 3s ease forwards;
       }
     }
 
     &:hover .gradient-card {
-      animation: Gradient 1s ease forwards;
+      animation: Gradient 2s ease forwards;
 
     }
 
   }
-
-
 
 
   a {
@@ -159,13 +192,44 @@ body {
 
 
 
-  @keyframes Animation {
+  @keyframes ArchitectureAnimation {
     0% {
       background-position: 10% 0%
     }
 
     50% {
       background-position: 91% 100%
+    }
+
+    100% {
+      background-position: 10% 0%;
+    }
+  }
+
+  @keyframes ZoomInAnimation {
+    0% {
+      transform: scale(1.5);
+      top: 0
+    }
+
+    100% {
+      background-position: 60% 40%;
+      transform: scale(1);
+      top: 0
+    }
+  }
+
+  @keyframes FightAnimation {
+    0% {
+      background-position: 50% 60%;
+    }
+
+    30% {
+      background-position: 10% 0%;
+    }
+
+    30% {
+      background-position: 91% 100%;
     }
 
     100% {

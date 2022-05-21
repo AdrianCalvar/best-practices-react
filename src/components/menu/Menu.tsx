@@ -1,13 +1,23 @@
 import React from 'react';
 import './styles.scss';
+import { useNavigate } from "react-router-dom";
+
 export function Menu ()
 {
+  let navigate = useNavigate();
 
+  async function onClickRedirect ( event: React.MouseEvent<HTMLDivElement, MouseEvent>, name: string )
+  {
+    event.preventDefault();
+    const route = '/' + name;
+    navigate( route, { replace: false } );
+
+  };
   return (
     <div className='main-menu-container'>
       <h1>Buenas prácticas React</h1>
       <div className='card-container'>
-        <div className='card architecture'>
+        <div onClick={ ( event ) => onClickRedirect( event, 'arquitectura' ) } className='card architecture'>
           <div className='gradient-card'>
           </div>
           <div className='content'>
@@ -16,14 +26,16 @@ export function Menu ()
             </div>
           </div>
         </div>
-        <div className='card'>
+        <div onClick={ ( event ) => onClickRedirect( event, 'clasesvsfunciones' ) } className='card clasesvsfunciones'>
+          <div className='gradient-card'>
+          </div>
           <div className='content'>
             <div className='link-text-div'>
               <a href="/clasesvsfunciones">Clases vs Funciones</a>
             </div>
           </div>
         </div>
-        <div className='card'>
+        <div onClick={ ( event ) => onClickRedirect( event, 'redux' ) } className='card redux'>
           <div className='content'>
             <div className='link-text-div'>
               <a href='/redux'>Redux</a>
@@ -34,3 +46,4 @@ export function Menu ()
     </div>
   );
 }
+
