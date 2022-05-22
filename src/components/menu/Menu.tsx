@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.scss';
 import { useNavigate } from "react-router-dom";
 
+
 export function Menu ()
 {
   let navigate = useNavigate();
@@ -15,8 +16,9 @@ export function Menu ()
   };
   return (
     <div className='main-menu-container'>
-      <h1>Buenas prácticas React</h1>
-      <div className='card-container'>
+      <h1>BUENAS PRÁCTICAS</h1>
+      <div className='separator'/>
+            <div className='card-container'>
         <div onClick={ ( event ) => onClickRedirect( event, 'arquitectura' ) } className='card architecture'>
           <div className='gradient-card'>
           </div>
