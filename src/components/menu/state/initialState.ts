@@ -1,6 +1,5 @@
-import { CounterState } from "../types/types";
+import { ArchitectureState } from "../types/types";
 
-export const initialState: CounterState = {
+export const initialState: ArchitectureState = {
   value: 0,
-  status: 'idle',
 };

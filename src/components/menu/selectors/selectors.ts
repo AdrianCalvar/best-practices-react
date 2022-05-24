@@ -5,4 +5,4 @@
 import { RootState } from "../../../types/types";
 
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectCount = (state: RootState) => state.counter.value;
+export const selectCount = (state: RootState) => state.menu.value;

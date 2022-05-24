@@ -1,0 +1,31 @@
+.classvsfunctions-main {
+  background-color: whitesmoke;
+  width: 70vw;
+  margin: 50px;
+
+  b {
+    color: black
+  }
+
+  .components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .componets-centering-div {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  button {
+    background-color: rgb(96, 145, 252);
+    color: white;
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    width: 70px;
+    margin: 10px
+  }
+}

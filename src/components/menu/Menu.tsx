@@ -17,14 +17,14 @@ export function Menu ()
   return (
     <div className='main-menu-container'>
       <h1>BUENAS PRÁCTICAS</h1>
-      <div className='separator'/>
-            <div className='card-container'>
+      <div className='separator' />
+      <div className='card-container'>
         <div onClick={ ( event ) => onClickRedirect( event, 'arquitectura' ) } className='card architecture'>
           <div className='gradient-card'>
           </div>
           <div className='content'>
             <div className='link-text-div'>
-              <a href='/arquitectura'>Arquitectura</a>
+              <a href='/arquitectura'>Arquitectura y DOM</a>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ export function Menu ()
             </div>
           </div>
         </div>
-        <div onClick={ ( event ) => onClickRedirect( event, 'redux' ) } className='card redux'>
+        <div onClick={ ( event ) => onClickRedirect( event, 'hooks' ) } className='card redux'>
           <div className='content'>
             <div className='link-text-div'>
               <a href='/redux'>Redux</a>
